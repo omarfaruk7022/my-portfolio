@@ -51,7 +51,7 @@ export default function FixedDetails() {
                 <GrFacebookOption />
               </Link>
               <Link
-                href={"https://twitter.com/Omar_Faruk_7022"}
+                href={"https://twitter.com/omarfaruk_7022"}
                 target="_blank"
                 className="text-xl bg-[#F3F6F6] dark:bg-[#1D1D1D] p-2 rounded-lg text-[#1D9BF0] hover:bg-gradient-to-l to-[#23CE6B] from-[#286e45] hover:text-white "
               >
