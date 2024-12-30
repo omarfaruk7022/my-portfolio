@@ -6,7 +6,7 @@ import swal from "sweetalert";
 export default function Contact() {
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
 
     if (form.current.name.value === "") {
@@ -17,28 +17,55 @@ export default function Contact() {
       swal("Error!", "Please enter your email!", "error");
       return;
     }
+
+    const email = form.current.email.value;
+    const fakeEmailPattern = /^(test|fake|example|noreply|dummy)\d*@\w+\.\w+$/;
+
+    if (fakeEmailPattern.test(email)) {
+      swal(
+        "Error! 😡",
+        `Why are you trying to reach with this ${email} fake email? 🤔`,
+        "error"
+      );
+      return;
+    }
+
     if (form.current.message.value === "") {
       swal("Error!", "Please enter your message!", "error");
       return;
     }
-    
-    emailjs
-      .sendForm(
-        "service_sgnw5dn",
-        "template_gv3o4os",
-        form.current,
-        "NU1AbEAbbOjC8_grS"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          swal("Success!", "Your message is sent!", "success");
-          form.current.reset();
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+
+    try {
+      // Fetch the user's IP address
+      const response = await fetch("https://api.ipify.org?format=json");
+      const data = await response.json();
+
+      // Set the IP address in the hidden input field
+      form.current.userIP.value = data.ip;
+
+      // Send email with emailjs
+      emailjs
+        .sendForm(
+          "service_sgnw5dn", // Replace with your service ID
+          "template_gv3o4os", // Replace with your template ID
+          form.current, // Use the form element
+          "NU1AbEAbbOjC8_grS" // Replace with your public API key
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            swal("Success!", "Your message is sent!", "success");
+            form.current.reset();
+          },
+          (error) => {
+            console.error("Failed to send email:", error);
+            swal("Error!", "Failed to send your message!", "error");
+          }
+        );
+    } catch (error) {
+      console.error("Failed to fetch IP:", error);
+      swal("Error!", "Unable to fetch your IP address!", "error");
+    }
   };
 
   return (
@@ -57,6 +84,8 @@ export default function Contact() {
             <span className="text-red-400">Opportunities.</span>
           </h2>
           <form ref={form} className="mt-10">
+            <input type="hidden" name="userIP" />
+
             <label
               for="Name"
               class="relative block rounded-md border-b  focus-within:border-green-400 focus-within:ring-0 w-full focus-within:ring-green-400 focus-within:ring-opacity-50 my-5"

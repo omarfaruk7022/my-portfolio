@@ -8,7 +8,6 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -23,13 +22,16 @@ html {
   }
 }
 
-.vertical-timeline-element-content{
+.vertical-timeline-element-content {
   padding: 0 !important;
   background-color: transparent !important;
 }
-.vertical-timeline--two-columns .vertical-timeline-element-content{
+.vertical-timeline--two-columns .vertical-timeline-element-content {
   padding: 0 !important;
 }
 .p-4 {
   padding: 0;
+}
+.swal-text {
+  text-align: center; /* Center-align the text */
 }
