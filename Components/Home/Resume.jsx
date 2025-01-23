@@ -243,13 +243,19 @@ export default function Resume() {
                 </h4>
                 <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
                   Web Design
+                </h4>{" "}
+                <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
+                  Web Development
                 </h4>
                 <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
+                  Server management
+                </h4>
+                {/* <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
                   Typing
                 </h4>
                 <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
                   Thinking About Something Else
-                </h4>
+                </h4> */}
                 <h4 className="bg-[#EDF2F2] dark:bg-[#1D1D1D] p-2 inline-block m-1 rounded-sm">
                   Time Management
                 </h4>
