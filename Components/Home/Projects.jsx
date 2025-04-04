@@ -4,7 +4,6 @@ import idolgroup from "../../assets/Images/idolgroup.png";
 import sfs from "../../assets/Images/sfs.png";
 import islamicposhak from "../../assets/Images/islamicposhak.png";
 import bus from "../../assets/Images/bus365.png";
-import cart24 from "../../assets/Images/cart24.png";
 import skytrip from "../../assets/Images/skytrip.png";
 import news365 from "../../assets/Images/news365.png";
 import maherchat from "../../assets/Images/maherchat.png";

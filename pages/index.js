@@ -23,6 +23,7 @@
 //   );
 // }
 
+import Chatbot from "@/Components/Common/Chatboat";
 import Navbar from "@/Components/Common/Navbar";
 import FixedDetails from "@/Components/Home/FixedDetails";
 import TabRouting from "@/Components/Home/TabRouting";
@@ -83,6 +84,7 @@ export default function Home() {
           <TabRouting />
         </div>
       </div>
+      <Chatbot />
     </>
   );
 }
