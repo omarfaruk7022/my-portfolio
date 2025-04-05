@@ -4,7 +4,7 @@ import idolgroup from "../../assets/Images/idolgroup.png";
 import sfs from "../../assets/Images/sfs.png";
 import islamicposhak from "../../assets/Images/islamicposhak.png";
 import bus from "../../assets/Images/bus365.png";
-import skytrip from "../../assets/Images/skytrip.png";
+import skytrip from "../../assets/Images/ticketing-ss.png";
 import news365 from "../../assets/Images/news365.png";
 import maherchat from "../../assets/Images/maherchat.png";
 
@@ -57,10 +57,10 @@ export default function Projects() {
             </div>
             <div className="p-5">
               <h2 className="text-2xl text-transparent bg-clip-text bg-gradient-to-l to-[#0d9244] from-[#57e793]">
-                Skytrip
+                Ticketing
               </h2>
               <p className="text-xs text-black dark:text-[#d8d8d8]">
-                Developed an air ticketing system using React.js and Bootstrap,
+                Developed an air ticketing system using Next.js and Tailwindcss,
                 integrated with Laravel for backend functionalities. The system
                 utilizes Sabre and Galileo GDS APIs for real-time flight
                 searches and bookings, ensuring a seamless travel experience.
@@ -70,7 +70,7 @@ export default function Projects() {
               <div className="flex justify-between items-center pt-4">
                 <Link
                   className=" text-green-400 flex items-center text-sm   hover:text-green-500"
-                  href="https://skytrip.com/"
+                  href="https://ticketing.com.bd/"
                   target="_blank"
                 >
                   Preview
