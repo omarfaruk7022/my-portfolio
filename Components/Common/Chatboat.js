@@ -42,25 +42,72 @@ export default function Chatbot() {
 
     // Predefined responses
     if (lowerCaseMsg.includes("who are you")) {
-      return "I am your AI Assistant of Muhammad Omar Faruk, here to guide you through this portfolio and tell you about me and my work.";
+      return `
+        <strong>I am your AI Assistant of Muhammad Omar Faruk</strong>, here to guide you through this portfolio and tell you about me and my work.
+        <br><br>
+        <strong>Occupation:</strong> Frontend Developer at <strong>Bdtask Limited</strong><br>
+        <strong>Technologies I specialize in:</strong><br>
+        - ReactJS<br>
+        - Next.js<br>
+        - Tailwind CSS<br><br>
+        <strong>Years of Experience:</strong> 2.5+ years<br><br>
+        <strong>Role/Responsibilities:</strong><br>
+        - Building and maintaining modern web applications<br>
+        - Optimizing user interfaces for better user experience<br>
+        - Working with frontend technologies like ReactJS, Next.js, and Tailwind CSS<br><br>
+        
+        Feel free to ask me more about my work or projects!
+      `;
     }
 
     if (lowerCaseMsg.includes("purpose of this portfolio")) {
-      return "The purpose of this portfolio is to showcase my development skills and the projects I’ve worked on. It serves as an introduction to my work and abilities as a frontend developer.";
+      return `
+        <strong>The purpose of this portfolio</strong> is to showcase my development skills and the projects I’ve worked on. It serves as an introduction to my work and abilities as a frontend developer.
+        <br><br>
+        <strong>In this portfolio you’ll find:</strong><br>
+        - Projects I’ve built<br>
+        - Technologies I use<br>
+        - Insights into my skills and experience<br><br>
+        I’m constantly learning and evolving as a developer, and this portfolio reflects my progress.
+      `;
     }
 
     if (lowerCaseMsg.includes("where are you working")) {
-      return "I am currently working as a Frontend Developer at Bdtask Limited, specializing in ReactJS, Next.js, and Tailwind CSS, where I help build modern, dynamic web applications.";
+      return `
+        I am currently working as a Frontend Developer at <strong>Bdtask Limited</strong>, where I specialize in:
+        <br><br>
+        - <strong>ReactJS</strong><br>
+        - <strong>Next.js</strong><br>
+        - <strong>Tailwind CSS</strong><br><br>
+        My work involves building modern, dynamic web applications with a focus on high performance and user-friendly interfaces.
+      `;
     }
 
     if (lowerCaseMsg.includes("what is your role")) {
-      return "I am a frontend developer working on user interfaces, optimizing user experiences, and ensuring the performance of web applications.";
+      return `
+        My role is to build, improve, and maintain the user interface and frontend functionality of web applications.
+        <br><br>
+        <strong>Responsibilities include:</strong><br>
+        - Designing and developing web applications<br>
+        - Ensuring smooth user experience through optimal performance<br>
+        - Collaborating with backend developers and other team members<br>
+        - Maintaining responsive design for multiple devices<br><br>
+        My goal is to make web apps both functional and visually appealing.
+      `;
     }
+
     if (
       lowerCaseMsg.includes("contact me") ||
-      lowerCaseMsg.includes("how can i contact you")
+      lowerCaseMsg.includes("how can i contact you") ||
+      lowerCaseMsg.includes("contact info")
     ) {
-      return "You can contact me via email at: <a href='mailto:omarfaruk7022@gmail.com' class='text-blue-500 hover:underline'>omarfaruk7022@gmail.com</a> or connect with me on LinkedIn: <a href='https://www.linkedin.com/in/muhammad-omar-faruk' target='_blank' class='text-blue-500 hover:underline'>Muhammad Omar Faruk</a>";
+      return `
+        You can contact me via:
+        <br><br>
+        <strong>Email</strong>: <a href="mailto:omarfaruk7022@gmail.com" target="_blank" style="color: #1d72b8;">omarfaruk7022@gmail.com</a><br>
+        <strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/omar-faruk7022/" target="_blank" style="color: #1d72b8;">Visit my LinkedIn profile</a><br><br>
+        Feel free to reach out with any questions or opportunities!
+      `;
     }
 
     // If the message does not match any of the predefined answers, call the chat API
@@ -99,7 +146,7 @@ export default function Chatbot() {
           </h2>
 
           {/* Chat window */}
-          <div className="flex-1 px-4 py-2 overflow-y-auto max-h-80 space-y-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thin">
+          <div className="flex-1 px-4 py-2 overflow-y-auto max-h-96 space-y-3 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-thin">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -113,12 +160,44 @@ export default function Chatbot() {
                       ? "bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white rounded-br-none"
                       : "bg-gray-100 text-gray-800 rounded-bl-none"
                   }`}
-                  dangerouslySetInnerHTML={{ __html: msg.content }} 
+                  dangerouslySetInnerHTML={{ __html: msg.content }}
                 >
                   {/* {msg.content} */}
                 </span>
               </div>
             ))}
+            <div className="px-4 space-y-1 flex flex-col items-center h-20 overflow-auto scrollbar-hide">
+              <button
+                onClick={() => setInput("who are you")}
+                className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
+              >
+                Who are you?
+              </button>
+              <button
+                onClick={() => setInput("purpose of this portfolio")}
+                className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
+              >
+                Purpose of this portfolio
+              </button>
+              <button
+                onClick={() => setInput("where are you working")}
+                className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
+              >
+                Where are you working?
+              </button>
+              <button
+                onClick={() => setInput("what is your role")}
+                className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
+              >
+                What is your role?
+              </button>
+              <button
+                onClick={() => setInput("how can i contact you")}
+                className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
+              >
+                How can I contact you?
+              </button>
+            </div>
 
             {/* Typing indicator */}
             {loading && (
@@ -144,7 +223,7 @@ export default function Chatbot() {
             />
             <button
               onClick={sendMessage}
-              className="ml-2 px-4 py-2 bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:bg-gradient-to-r hover:to-[#23CE6B] text-white rounded-lg hover:bg-green-600 transition"
+              className="ml-2 px-4 py-2 bg-gradient-to-l to-[#23CE6B] from-[#318554]  text-white rounded-lg hover:bg-gradient-to-l hover:to-[#23CE6B] hover:from-[#318554] transition"
             >
               Send
             </button>
