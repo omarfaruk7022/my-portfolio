@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import chatImage from "@/assets/Images/chatbot.png";
 import Image from "next/image";
+import { RxCross2 } from "react-icons/rx";
+
 export default function Chatbot() {
   const [messages, setMessages] = useState(() => {
     if (typeof window !== "undefined") {
@@ -139,7 +141,7 @@ export default function Chatbot() {
     <div>
       {/* Chat UI */}
       {isChatVisible && (
-        <div className="fixed bottom-12 right-12 w-[360px] bg-white border border-gray-200 rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-16 right-2 w-[360px] bg-white  rounded-2xl shadow-2xl flex flex-col overflow-hidden">
           {/* Header */}
           <h2 className="bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white px-4 py-3 font-semibold text-lg">
             AI Assistant
@@ -217,7 +219,7 @@ export default function Chatbot() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="flex-1 p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 w-full"
+              className="flex-1 p-2 bg-transparent text-black rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 w-full"
               placeholder="Type a message..."
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
             />
@@ -301,13 +303,17 @@ export default function Chatbot() {
       {/* Toggle Chat Button */}
       <button
         onClick={() => setIsChatVisible((prev) => !prev)}
-        className="fixed bottom-4 right-4 p-2 bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white rounded-full shadow-lg hover:bg-green-500 transition"
+        className="fixed bottom-3 right-4 p-2 bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white rounded-full shadow-lg hover:bg-green-500 transition"
       >
-        <Image
-          src={chatImage} // Add your AI image here
-          alt="AI Icon"
-          className="w-8 h-8 object-cover rounded-full "
-        />
+        {isChatVisible ? (
+          <RxCross2 size={32} />
+        ) : (
+          <Image
+            src={chatImage} // Add your AI image here
+            alt="AI Icon"
+            className="w-8 h-8 object-cover rounded-full"
+          />
+        )}
       </button>
     </div>
   );
