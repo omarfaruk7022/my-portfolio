@@ -303,15 +303,15 @@ export default function Chatbot() {
       {/* Toggle Chat Button */}
       <button
         onClick={() => setIsChatVisible((prev) => !prev)}
-        className="fixed bottom-3 right-4 p-2 bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white rounded-full shadow-lg hover:bg-green-500 transition"
+        className="fixed bottom-2 right-4 p-2 bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white rounded-full shadow-lg hover:bg-green-500 transition"
       >
         {isChatVisible ? (
-          <RxCross2 size={32} />
+          <RxCross2 size={36} />
         ) : (
           <Image
             src={chatImage} // Add your AI image here
             alt="AI Icon"
-            className="w-8 h-8 object-cover rounded-full"
+            className="w-9 h-9 object-cover rounded-full"
           />
         )}
       </button>
