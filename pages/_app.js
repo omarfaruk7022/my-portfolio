@@ -1,4 +1,3 @@
-import CookieConsent from "@/Components/Common/CookieConsent";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
@@ -11,7 +10,6 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <Component {...pageProps} />
-      <CookieConsent />
     </ThemeProvider>
   );
 }
