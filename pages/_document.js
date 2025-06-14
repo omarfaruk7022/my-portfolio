@@ -4,8 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6981915612534521"
-     crossorigin="anonymous"></script>
+     
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
