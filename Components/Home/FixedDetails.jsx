@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import profile from "../../assets/Images/cv-bg-none.png";
+import profile from "../../assets/Images/profile-image.png";
 import { GrFacebookOption } from "react-icons/gr";
 import { IoLogoTwitter } from "react-icons/io5";
 import { RxGithubLogo } from "react-icons/rx";
@@ -15,8 +15,8 @@ import Link from "next/link";
 export default function FixedDetails() {
   const saveFile = () => {
     saveAs(
-      "https://drive.google.com/uc?export=download&id=1C6ej0sl9pBTXjV3nJWx3c0q-hBcpAP54",
-      "example.pdf"
+      "https://drive.google.com/uc?export=download&id=1er6zPtsmosYYtZcUnpoXnwRnu487W7l7",
+      "example.pdf",
     );
   };
 
@@ -25,14 +25,14 @@ export default function FixedDetails() {
     <div>
       <div className="w-full mx-auto relative bg-white dark:bg-[#111111] px-6 rounded-[20px]  ">
         <div>
-          <Image
+          <img
             class=" absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto  mt-[-140px]"
             draggable={false}
-            src={profile}
+            src={profile.src}
             alt="profile"
-            width={220}
-            height={220}
-          ></Image>
+            // width={220}
+            // height={220}
+          />
           <div className="pt-[100px] pb-8">
             <div className="pt-5">
               <h2 className="text-xl md:text-[18px] lg:text-[24px]  font-bold text-center">

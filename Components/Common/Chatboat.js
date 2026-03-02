@@ -52,7 +52,7 @@ export default function Chatbot() {
         - ReactJS<br>
         - Next.js<br>
         - Tailwind CSS<br><br>
-        <strong>Years of Experience:</strong> 2.5+ years<br><br>
+        <strong>Years of Experience:</strong> 3.5+ years<br><br>
         <strong>Role/Responsibilities:</strong><br>
         - Building and maintaining modern web applications<br>
         - Optimizing user interfaces for better user experience<br>
@@ -141,7 +141,7 @@ export default function Chatbot() {
     <div>
       {/* Chat UI */}
       {isChatVisible && (
-        <div className="fixed bottom-16 right-2 w-[360px] bg-white  rounded-2xl shadow-2xl flex flex-col overflow-hidden">
+        <div className="fixed bottom-16 right-2 w-[360px] bg-white  rounded-2xl shadow-2xl flex flex-col overflow-hidden h-[350px]">
           {/* Header */}
           <h2 className="bg-gradient-to-l to-[#23CE6B] from-[#318554] text-white px-4 py-3 font-semibold text-lg">
             AI Assistant
@@ -168,7 +168,7 @@ export default function Chatbot() {
                 </span>
               </div>
             ))}
-            <div className="px-4 space-y-1 flex flex-col items-center h-20 overflow-auto scrollbar-hide">
+            <div className="px-4 space-y-1 flex flex-col items-center h-20 ">
               <button
                 onClick={() => setInput("who are you")}
                 className="w-fit p-2 text-sm rounded-full text-black border hover:bg-gradient-to-l to-[#23CE6B] from-[#318554] hover:text-white"
