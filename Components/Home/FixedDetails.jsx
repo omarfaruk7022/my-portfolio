@@ -65,7 +65,7 @@ export default function FixedDetails() {
                 <RxGithubLogo />
               </Link>
               <Link
-                href={"https://www.linkedin.com/in/md-omar-faruk7022/"}
+                href={"https://www.linkedin.com/in/muhammad-omar-dev"}
                 target="_blank"
                 className="text-xl bg-[#F3F6F6] dark:bg-[#1D1D1D] p-2 rounded-lg text-[#1A8CD8] hover:bg-gradient-to-l to-[#23CE6B] from-[#286e45] hover:text-white "
               >
