@@ -18,7 +18,7 @@ export default function Document() {
         ></link>
       </Head>
 
-      <body className="bg-[url(https://i.ibb.co/bQZStKT/bg.jpg)]  bg-fixed   bg-cover bg-center bg-no-repeat  dark:bg-[url(https://i.ibb.co/PFCtVwt/bg-dark.jpg)]  ">
+      <body className="bg-[url(https://i.ibb.co.com/Pv5c2jVf/v882batch2-kul-05.jpg)]  bg-fixed   bg-cover bg-center bg-no-repeat  dark:bg-[url(https://i.ibb.co.com/t02c3N5/darker-image.jpg)]  ">
         <Main />
         <NextScript />
       </body>
